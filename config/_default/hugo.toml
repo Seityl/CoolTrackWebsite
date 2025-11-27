@@ -1,0 +1,9 @@
+######################## default configuration ####################
+baseURL = "https://cooltrack.com/"
+title = "Cool Track - Intelligent Temperature Monitoring"
+theme = "andromeda-light"
+timeZone = "America/New_York"
+languageCode = "en-us"
+pagination.pagerSize = 12
+summaryLength = 20
+enableRobotsTXT = true
