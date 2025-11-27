@@ -1,4 +1,18 @@
 #################### default parameters ################################
+# Typography and colors
+[variables]
+font_size = "16px"
+font_scale = "1.25"
+font_primary = "Inter:wght@400;500;600;700"
+font_primary_type = "sans-serif"
+font_secondary = "Inter:wght@400;500;600;700"
+font_secondary_type = "sans-serif"
+color_primary = "#0066CC"
+white = "#ffffff"
+black = "#000000"
+light = "#FAFAFA"
+border_color = "#E5E5E5"
+
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
