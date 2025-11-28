@@ -2,13 +2,13 @@
 
 # CSS Plugins
 [[params.plugins.css]]
-link = "plugins/line-awesome/css/line-awesome.min.css"
+link = "https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/css/line-awesome.min.css"
 
 [[params.plugins.css]]
-link = "plugins/swiper/swiper-bundle.min.css"
+link = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 
 [[params.plugins.css]]
-link = "plugins/aos/aos.css"
+link = "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
 
 # JS Plugins
 [[params.plugins.js]]

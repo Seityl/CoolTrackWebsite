@@ -1,118 +1,65 @@
 ---
 # banner
 banner:
-  title: "Intelligent Temperature Monitoring That Never Sleeps"
-  subtitle: "Real-time alerts, cloud logging, and peace of mind for critical temperature control"
-  button: "Start Free Trial"
-  button_link: "#trial"
-  button_secondary: "Watch Demo"
-  button_secondary_link: "#demo"
-  image: "images/banner-app.png"
+  title: "Intelligent Temperature Monitoring, Logging, and Alerts"
+  subtitle: "Professional temperature monitoring platform with real-time sensor tracking, multi-gateway support, and intelligent alerting for food service, healthcare, and industrial operations"
+  button: "Contact us today"
+  button_link: "/contact"
+  button_secondary: "View Features"
+  button_secondary_link: "/features"
+  image: "images/dashboard-main.png"
 
-# brands
+# brands - disabled (Cool Track is self-hosted, not a SaaS with public customer logos)
 brands_carousel:
-  enable: true
-  brand_images:
-    - "images/brands/01-colored.png"
-    - "images/brands/02-colored.png"
-    - "images/brands/04-colored.png"
-    - "images/brands/03-colored.png"
-    - "images/brands/05-colored.png"
-    - "images/brands/06-colored.png"
-    - "images/brands/04-colored.png"
-    - "images/brands/02-colored.png"
-    - "images/brands/01-colored.png"
-    - "images/brands/06-colored.png"
-    - "images/brands/05-colored.png"
+  enable: false
 
 # features
 features:
   enable: true
-  subtitle: "Why Cool Track?"
-  title: "Everything you need to <br> monitor temperature 24/7"
-  description: "Cool Track combines wireless sensors, intelligent alerts, and cloud-based logging <br> to give you complete control over your temperature-sensitive environments."
+  subtitle: "Enterprise-Grade Monitoring"
+  title: "Professional temperature <br> monitoring platform"
+  description: "Cool Track provides real-time sensor network management, intelligent threshold alerts, <br> and comprehensive data logging with Progressive Web App access from any device."
   features_blocks:
     - icon: "las la-thermometer-half"
-      title: "Real-Time Monitoring"
-      content: "Monitor temperatures from anywhere with wireless sensors that update every 60 seconds. Get instant visibility into all your critical zones."
+      title: "Multi-Gateway Sensor Network"
+      content: "Monitor unlimited sensors across multiple gateway relays. Automatic sensor discovery, approval workflows, temperature calibration with offset management, and heartbeat monitoring."
     - icon: "las la-bell"
-      title: "Intelligent Alerts"
-      content: "Receive instant notifications via SMS, email, or phone call when temperatures go out of range. Never miss a critical event."
-    - icon: "las la-cloud"
-      title: "Cloud Data Logging"
-      content: "Automatic cloud backup of all temperature data with unlimited history. Access reports anytime for compliance and analysis."
+      title: "Smart Threshold Alerts"
+      content: "Duration-based temperature violations with email and push notifications. Configurable min/max thresholds per sensor, working hours scheduling, and custom alert recipients."
+    - icon: "las la-chart-line"
+      title: "Historical Data & Export"
+      content: "Interactive charts with real-time updates. Export CSV reports for date ranges (up to 31 days) for HACCP, FDA, and CDC compliance documentation."
     - icon: "las la-shield-alt"
-      title: "Compliance Ready"
-      content: "Meet FDA, HACCP, and other regulatory requirements with automated reporting and tamper-proof audit trails."
-    - icon: "las la-battery-full"
-      title: "Battery Backup"
-      content: "Sensors run for 2+ years on a single battery. Built-in power backup ensures continuous monitoring even during outages."
+      title: "Role-Based Access Control"
+      content: "Three permission levels: Cool Track User, Cool Track Manager, and System Manager. Sensor approval workflows, maintenance logging, and activity tracking."
+    - icon: "las la-network-wired"
+      title: "TCP Gateway Integration"
+      content: "Ingest sensor data via TCP server with automatic type detection. Track temperature, humidity, voltage, signal strength (RSSI), and GPS coordinates."
     - icon: "las la-mobile"
-      title: "Mobile & Web Access"
-      content: "Monitor from any device with our responsive web dashboard and native mobile apps for iOS and Android."
+      title: "Progressive Web App"
+      content: "Install on iOS, Android, Windows, or macOS. Responsive interface with real-time dashboard updates and comprehensive data access from any device."
 
 # intro_video
 intro_video:
-  enable: true
-  subtitle: "See Cool Track in Action"
-  title: "2-minute product walkthrough"
-  description: "Watch how Cool Track helps businesses prevent spoilage, maintain compliance, <br> and protect their most temperature-sensitive assets."
-  video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
-  video_thumbnail: "images/video-popup.jpg"
+  enable: false
 
 
 # how_it_works
 how_it_works:   
   enable: true
   block:
-  - subtitle: "Simple Setup, Powerful Results"
-    title: "Install sensors in minutes, monitor in seconds"
-    description: "Our wireless sensors are pre-configured and ready to use out of the box. Simply place them in your refrigerators, freezers, or storage areas, and start monitoring immediately. No complicated wiring or technical expertise required."
-    image: "images/features-01.png"
+  - subtitle: "Flexible Deployment"
+    title: "Cloud-hosted or self-hosted on your infrastructure"
+    description: "Deploy Cool Track in the cloud for managed hosting, or self-host on your own infrastructure with full data control. Complete API for custom integrations and enterprise-grade reliability with automatic startup and monitoring."
+    image: "images/sensors-view.png"
 
-  - subtitle: "Proactive Protection"
-    title: "Get alerted before problems become disasters"
-    description: "Cool Track's intelligent alert system learns your normal temperature patterns and notifies you of anomalies before they become critical. Set custom thresholds, escalation rules, and multi-channel notifications to ensure the right people are always informed."
-    image: "images/features-02.png"
+  - subtitle: "Intelligent Alerting Engine"
+    title: "Prevent temperature excursions before they cause losses"
+    description: "Cool Track monitors temperature thresholds with duration-based violations (e.g., alert after 30 minutes above max). Email and push notifications with working hours configuration prevent alert fatigue. Automatic reconnection/disconnection alerts for sensors and gateways."
+    image: "images/mobile-dashboard.png"
 
 
 # testimonials
 testimonials:
-  enable: true
-  subtitle: "Trusted by Industry Leaders"
-  title: "Don't take our word for it"
-  description: "Join hundreds of businesses that trust Cool Track to protect their <br> temperature-sensitive assets and ensure compliance 24/7."
-  image_left: "images/testimonials-01.png"
-  image_right: "images/testimonials-02.png"
-
-  testimonials_quotes:
-    - quote: "Cool Track has been a game-changer for our hospital pharmacy. We've had zero temperature excursions since installation, and the compliance reports save us hours every month."
-      name: "Dr. Sarah Mitchell"
-      designation: "Pharmacy Director, Memorial Hospital"
-      image: "images/user-img/05-i.jpg"
-
-    - quote: "The real-time alerts prevented a major loss when our walk-in cooler failed overnight. The system paid for itself in the first month. Absolutely essential for any restaurant."
-      name: "Marcus Johnson"
-      designation: "Owner, Harbor Bistro"
-      image: "images/user-img/06-i.jpg"
-
-    - quote: "We manage 47 locations across three states. Cool Track gives us visibility into every refrigeration unit from a single dashboard. The mobile app is incredibly intuitive."
-      name: "Jennifer Chen"
-      designation: "Operations Manager, FreshMart Grocery"
-      image: "images/user-img/07-i.jpg"
-
-    - quote: "FDA compliance used to be a nightmare. Now our audit trails are automatic and tamper-proof. Our last inspection was the smoothest we've ever had."
-      name: "Robert Williams"
-      designation: "Quality Assurance Lead, BioPharm Labs"
-      image: "images/user-img/08-i.jpg"
-
-    - quote: "The battery life is incredible - we haven't changed a single battery in 18 months. Setup was literally plug-and-play. Best investment we've made in facility management."
-      name: "Amanda Rodriguez"
-      designation: "Facilities Director, Tech Campus"
-      image: "images/user-img/09-i.jpg"
-
-    - quote: "Customer support is outstanding. They helped us customize alert thresholds for our specific products and walked us through the entire setup process."
-      name: "David Thompson"
-      designation: "CEO, Cold Chain Logistics"
-      image: "images/user-img/10-i.jpg"
+  enable: false
 ---

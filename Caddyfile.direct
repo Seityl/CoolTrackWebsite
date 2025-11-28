@@ -1,51 +1,16 @@
-# Caddyfile for Cool Track Website - MAINTENANCE MODE
-# Shows maintenance page for public (FQDN) but serves site for internal IP
+# Caddyfile for Cool Track Website
+# Direct HTTPS configuration (no tunnel)
 
 {
+    # Email for Let's Encrypt certificates
+    email admin@cooltrack.co
     # Disable admin API to avoid port conflicts
     admin off
 }
 
-# Listen on port 8080 (Cloudflare Tunnel connects here - shows maintenance)
-:8080 {
-    bind 127.0.0.1 ::1
-    
-    # Serve the maintenance page for public traffic
-    root * /home/hugo/cooltrack-website
-    
-    # Serve maintenance.html for all requests
-    rewrite * /maintenance.html
-    
-    file_server
-    
-    # Enable gzip compression
-    encode gzip
-    
-    # Security headers
-    header {
-        X-Frame-Options "SAMEORIGIN"
-        X-XSS-Protection "1; mode=block"
-        X-Content-Type-Options "nosniff"
-        Referrer-Policy "strict-origin-when-cross-origin"
-        -Server
-        X-Maintenance-Mode "true"
-    }
-    
-    # Logging
-    log {
-        output file /home/hugo/cooltrack-website/caddy.log {
-            roll_size 10mb
-            roll_keep 5
-        }
-        format json
-    }
-}
-
-# Listen on port 8081 for internal access (direct IP and ZeroTier)
-:8081 {
-    bind 127.0.0.1 ::1
-    
-    # Serve the actual Hugo-generated site
+# Main site - Caddy will automatically handle HTTPS on ports 80/443
+cooltrack.co, www.cooltrack.co {
+    # Serve the Hugo-generated static files
     root * /home/hugo/cooltrack-website/public
     
     # Enable file serving with precompressed files
@@ -53,7 +18,7 @@
         precompressed gzip br
     }
     
-    # Enable compression
+    # Enable compression (gzip and brotli for better performance)
     encode {
         gzip 6
         zstd
@@ -62,12 +27,19 @@
     
     # Security headers
     header {
+        # Prevent clickjacking
         X-Frame-Options "SAMEORIGIN"
+        # XSS protection
         X-XSS-Protection "1; mode=block"
+        # Prevent MIME type sniffing
         X-Content-Type-Options "nosniff"
+        # Referrer policy
         Referrer-Policy "strict-origin-when-cross-origin"
+        # Content Security Policy
         Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://use.fontawesome.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://www.youtube.com https://player.vimeo.com;"
+        # Permissions Policy
         Permissions-Policy "geolocation=(), microphone=(), camera=()"
+        # Remove Server header
         -Server
     }
     
@@ -80,6 +52,7 @@
         defer
     }
     
+    # Cache other static assets - shorter cache for images that might update
     @static {
         path *.ico *.css *.js *.gif *.jpg *.jpeg *.png *.svg *.webp *.woff *.woff2 *.ttf *.eot *.otf
     }
@@ -88,6 +61,7 @@
         defer
     }
     
+    # HTML caching - short cache with revalidation
     @html {
         path *.html /
     }
@@ -96,7 +70,7 @@
         defer
     }
     
-    # Try files with fallback
+    # Try files, fallback to index.html for SPA-like behavior
     try_files {path} {path}/ {path}.html {path}/index.html /index.html
     
     # Logging

@@ -7,35 +7,35 @@ draft: false
 who_we_are:
   enable: true
   subtitle: "Who We Are"
-  title: "Hello, We're Andromeda Here for your Help"
-  description: "Your online Health & Fitness companion that offers free assistance on its Facebook Group and provides quality paid guided personal training packages by and through website. We are the first ever, online manifesto in Bangladesh to make place you will select when you think of getting fit"
+  title: "Professional Temperature Monitoring Platform"
+  description: "Cool Track is developed by Cogent Media Ltd., a technology company specializing in enterprise applications. Our platform provides intelligent temperature monitoring, logging, and alerts for food service, healthcare, and industrial operations requiring compliance and reliability."
 
   image: "images/about/01.jpg"
 
 # what_we_do
 what_we_do:
   enable: true
-  subtitle: "Our Works"
-  title: "What We Do"
+  subtitle: "Our Platform"
+  title: "What Cool Track Does"
   block:
-    - title: "Building a new class"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Real-Time Sensor Network Management"
+      content: "Monitor unlimited sensors across multiple gateway relays. TCP server ingests data with automatic type detection. Track temperature, humidity, voltage, signal strength, and GPS coordinates with heartbeat monitoring."
 
-    - title: "Design for anyone"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Intelligent Alert Engine"
+      content: "Duration-based temperature threshold monitoring with email and push notifications. Working hours configuration prevents alert fatigue. Custom recipients per sensor with role-based targeting."
 
-    - title: "Creative flair design"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Flexible Deployment Options"
+      content: "Deploy in the cloud for managed hosting, or self-host on your infrastructure with full data control. Enterprise-grade reliability with automatic startup and production monitoring."
 
-    - title: "Building products"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Progressive Web App"
+      content: "Multi-platform frontend installable on iOS, Android, Windows, or macOS. Real-time dashboards, historical charts, and CSV export for compliance documentation."
 
 # our_mission
 our_mission:
   enable: true
   subtitle: "OUR MISSION"
-  title: "Main Vision And Mission Of Our Company"
-  description: "We were freelance designers and developers, constantly finding ourselve deep vague feedback. leaving a notes from the sticky note piece ."
+  title: "Compliance-Driven Temperature Monitoring"
+  description: "We built Cool Track to provide healthcare facilities, restaurants, and industrial operations with a reliable platform for critical temperature monitoring. Professional-grade monitoring with flexible deployment options—cloud-hosted or self-hosted on your infrastructure."
 
   image: "images/about/02.jpg"
 

@@ -1,90 +1,85 @@
 ---
-title: "Pricing - Cool Track Temperature Monitoring"
-description: "Simple, transparent pricing for temperature monitoring. Plans starting at $49/month. 30-day free trial, no credit card required."
+title: "Cool Track Pricing"
+description: "Professional temperature monitoring solutions tailored to your needs. Contact us for a custom quote based on your requirements."
 draft: false
 ---
 
-## Simple, Transparent Pricing
+## Flexible Pricing for Your Business
 
-Choose the plan that fits your needs. Upgrade or downgrade anytime.
+Cool Track offers professional temperature monitoring solutions designed to meet the specific needs of your operation. Whether you're monitoring a single location or managing multiple facilities, we can provide a solution that fits your requirements and budget.
 
-**30-day free trial • No credit card required • Cancel anytime**
+### What Affects Pricing
 
-### Starter - $49/month
+Several factors influence the cost of your Cool Track deployment:
 
-**Perfect for:** Small businesses and single locations
+- **Number of monitoring points** - Sensors and gateways required
+- **Deployment model** - Cloud-hosted, on-premises, or hybrid
+- **Support requirements** - Self-managed or professionally supported
+- **Custom features** - Integrations, branding, or specialized reporting
+- **Scale** - Single site or multi-location operations
 
-**Includes:**
-- Up to 5 sensors
-- Real-time monitoring (60-second intervals)
-- Email & SMS alerts
-- Mobile & web dashboard
-- 90-day data retention
-- Basic compliance reports
-- Email support
+### Why Custom Quotes?
 
-[Start Free Trial](#trial)
+Every business has unique monitoring requirements. Rather than forcing you into a one-size-fits-all plan, we work with you to design a solution that provides exactly what you need - nothing more, nothing less.
 
----
-
-### Professional - $149/month ⭐ MOST POPULAR
-
-**Perfect for:** Growing businesses and multiple locations
-
-**Includes:**
-- Up to 25 sensors (add more for $10/month each)
-- Real-time monitoring (configurable intervals)
-- Email, SMS & phone call alerts
-- Advanced alert escalation
-- Unlimited data retention
-- Advanced compliance reports
-- API access & webhooks
-- Priority support
-
-[Start Free Trial](#trial)
+**Benefits of our approach:**
+- Pay only for what you use
+- Flexible scaling as your needs grow
+- No hidden fees or surprise charges
+- Professional consultation included
+- Tailored support options
 
 ---
 
-### Enterprise - Custom Pricing
+## Get Your Quote Today
 
-**Perfect for:** Large organizations and custom requirements
+Ready to protect your temperature-sensitive assets? Contact our team to discuss your specific requirements and receive a detailed quote.
 
-**Includes:**
-- Unlimited sensors & locations
-- Custom integrations
-- SSO / SAML
-- 24/7 dedicated support
-- Custom SLA agreements
-- Dedicated account manager
-- On-site training
+**Contact us:**
+- Email: support@cooltrack.co
+- Phone: +1 (767) 295-1271
+- Phone: +1 (767) 275-3290  
+- Phone: +1 (246) 836-5557
 
-[Contact Sales](#enterprise-contact)
+Our team will work with you to:
+1. Understand your monitoring requirements
+2. Recommend the optimal hardware and deployment model
+3. Provide transparent pricing with no obligations
+4. Assist with deployment and setup if needed
 
 ---
 
-## Add-Ons
+## Deployment Options
 
-- **Additional Sensors:** $10/month each
-- **Humidity Sensors:** $15/month each
-- **Door Sensors:** $8/month each
-- **Cellular Backup:** $20/month per location
-- **NIST Calibration:** $75 per sensor/year
-- **Professional Installation:** Starting at $500
+We support various deployment models to match your operational needs and infrastructure preferences:
 
-## Frequently Asked Questions
+**Cloud Deployment**
+Professional hosting on enterprise-grade infrastructure with automatic updates and monitoring.
 
-**How does the free trial work?**
-Start with a 30-day free trial. No credit card required. We ship sensors to you and you can start monitoring immediately.
+**On-Premises Deployment**
+Complete data sovereignty with deployment on your own servers and network.
 
-**Can I change plans later?**
-Yes! Upgrade or downgrade anytime with no penalties.
+**Hybrid Solutions**
+Combine the reliability of cloud hosting with local gateway management for optimal security and performance.
 
-**Is there a contract?**
-No long-term contracts. All plans are month-to-month. Annual billing is optional and saves ~20%.
+---
 
-**What's included in the sensor price?**
-Hardware, batteries (2+ years), cloud service, mobile/web access, and all updates.
+## Professional Services
 
-## Ready to Get Started?
+Beyond the core platform, we offer professional services to ensure your success:
 
-[Start Free Trial](#trial) or [Talk to Sales](#contact-sales)
+- Deployment assistance and setup
+- Custom integration development
+- Staff training and documentation
+- Ongoing technical support
+- System optimization and scaling
+
+All services are available à la carte or as part of comprehensive support packages.
+
+---
+
+## Next Steps
+
+The best way to understand Cool Track pricing is to speak with our team. We'll ask about your specific needs and provide a detailed quote with transparent pricing.
+
+**[Contact us today](/contact)** to get started.
