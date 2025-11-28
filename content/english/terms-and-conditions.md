@@ -1,44 +1,185 @@
 ---
 title: "Terms & Conditions"
-date: "2023-01-14"
+date: "2025-11-28"
 layout: "terms-and-conditions"
 draft: false
 
-description: "By Using The Service Or Clicking “I Agree”, The User Is Agreeing To Be Bound By This Agreement. If You Are Agreeing To This Agreement On Behalf Of Or For The Benefit Of A Company, Then The User Represents And Warrants That It Has The Necessary Authority To Agree To This Agreement On The Company’s"
+description: "Terms and Conditions for Cool Track temperature monitoring system and services. By using Cool Track, you agree to be bound by these terms."
 ---
 
 ### 1. Definitions
 
-We collect certain identifying personal data when you sign up to our Service such as your name, email address, PayPal address (if different from email address), and telephone number. The personal data we collect from you is disclosed only in accordance with our Terms of Service and/or this Privacy Policy.Conclude collects Slack account and access information from Users for the purposes of connecting to the Slack API and to authenticate access to information on the Conclude website. Whenever you visit our Site, we may collect non-identifying information from you, such as referring URL, browser, operating system, cookie information, and Internet Service Provider. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, this information alone cannot usually be used to identify you.The term "personal data" does not include any anonymized and aggregated data made on the basis of personal data, which are wholly owned by Conclude.
+**"Cool Track"** refers to the temperature monitoring system, software platform, and related services provided.
 
-### 2. General Terms
+**"Service"** means the Cool Track temperature monitoring platform, including web application, mobile applications, gateway software, sensor hardware, and all related features and functionalities.
 
-#### Service Provided AS IS:
+**"User"** means any individual or entity that accesses or uses the Cool Track Service.
 
-The Service is provided for free during this pilot project, and is provided "as is" with no warranty. Conclude will provide User support for the Service, however; Conclude is not committed to any level of service or availability of the Service. A further description of the Service and our user support is available at the Site.
+**"Customer"** means the organization or individual that has purchased or is evaluating Cool Track services.
 
-#### Interoperation with Slack:
+**"Sensor Data"** means temperature readings, humidity data, and related telemetry collected by Cool Track sensors and gateways.
 
-The Service interoperates with Slack.com, and depends on the continuing availability and access to Slack. If for any reason Conclude cannot access or use Slack (including without limitation, change in terms or increase in fees charged by Slack), Conclude may not be able to provide all of the functions of its Service. No refund or credit, if applicable, will be provided for temporary unavailability of Slack (for example, maintenance windows).
+**"System"** refers to the complete Cool Track deployment including sensors, gateways, and software platform.
 
-#### Company Liability:
+### 2. Service Description
 
-If you enter into this agreement on behalf of a company, you hereby agree that the company is responsible under this Agreement for all actions and omissions conducted by its designated users of the Service.
+Cool Track provides professional temperature monitoring services including:
 
-### 4. Rules of Use
+- Real-time sensor network management
+- Multi-gateway support and sensor discovery
+- Intelligent threshold-based alerting
+- Historical data logging and CSV export
+- Progressive Web App (PWA) access
+- Role-based access control
+- TCP gateway integration
+- Email and push notifications
 
-1. must keep passwords secure and confidential;
-2. are solely responsible for User Data and all activity in their account while using the Service;
-3. must use commercially reasonable efforts to prevent unauthorized access to their account, and notify Conclude promptly of any such unauthorized access; and
-4. may use the Service only in accordance with Conclude's online user guide and all applicable laws and regulations.
+The Service may be deployed as cloud-hosted or self-hosted on Customer infrastructure.
 
-#### You must not:
+### 3. Service Terms
 
-- Enhance or improve User experience, our Site, or our Service.
-- Process transactions.
-- Send emails about our Site or respond to inquiries.
-- As this Privacy Policy and our Terms of Service.
+#### 3.1 Service Availability
 
-### 5. Intellectual Property Rights
+Cool Track strives to provide reliable service but does not guarantee uninterrupted availability. The Service is provided "as is" without warranty of any kind, express or implied. Scheduled maintenance windows will be communicated when possible.
 
-Your information may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the privacy laws may not be as protective as those in your jurisdiction. If you choose to provide information to us, Conclude transfers Personal Information to Google Cloud Platform and processes it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
+#### 3.2 Data Accuracy
+
+While Cool Track uses calibrated sensors and reliable data transmission, temperature readings are subject to sensor accuracy specifications, environmental factors, and network conditions. Users are responsible for validating critical measurements and maintaining appropriate backup monitoring systems where required by regulation.
+
+#### 3.3 Self-Hosted Deployments
+
+For self-hosted deployments, Customer is responsible for:
+- Infrastructure provisioning and maintenance
+- Network security and firewall configuration
+- Data backup and disaster recovery
+- System updates and patches
+- Gateway and sensor hardware management
+
+### 4. User Responsibilities
+
+Users agree to:
+
+1. Maintain secure and confidential access credentials
+2. Use the Service only for lawful purposes and in accordance with applicable regulations
+3. Notify Cool Track promptly of any security breaches or unauthorized access
+4. Comply with all applicable food safety, healthcare, and industrial regulations
+5. Maintain appropriate calibration and validation procedures for compliance requirements
+6. Not attempt to reverse engineer, decompile, or access source code
+7. Not use the Service to monitor unauthorized facilities or equipment
+
+### 5. Data Ownership and Privacy
+
+#### 5.1 Customer Data
+
+All Sensor Data and configuration information belong to the Customer. Cool Track claims no ownership rights to Customer data.
+
+#### 5.2 Data Storage
+
+- **Cloud-hosted**: Data is stored securely in Cool Track's cloud infrastructure
+- **Self-hosted**: Data is stored on Customer's infrastructure with full data control
+
+#### 5.3 Data Retention
+
+Historical sensor data is retained according to Customer configuration. Customers may export data at any time in CSV format.
+
+#### 5.4 Privacy
+
+Cool Track collects minimal personal information (name, email, phone) for account creation and alert delivery. This information is used solely for Service operation and is not shared with third parties except as required by law.
+
+### 6. Alert Notifications
+
+Alert notifications are provided on a best-effort basis. Cool Track is not liable for:
+
+- Delayed or undelivered email notifications
+- Failed push notifications due to device settings or network issues
+- Alerts not configured by the User
+- Sensor or gateway connectivity issues
+- Temperature excursions that occur outside configured alert thresholds
+
+Users must maintain appropriate manual monitoring procedures as required by regulatory compliance (FDA, HACCP, CDC, etc.).
+
+### 7. Hardware and Equipment
+
+#### 7.1 Sensors and Gateways
+
+Cool Track may provide or recommend specific sensor and gateway hardware. Customers are responsible for:
+- Proper installation and placement
+- Physical security of hardware
+- Replacement of damaged or failed units
+- Compliance with manufacturer specifications
+
+#### 7.2 Sensor Calibration
+
+Users are responsible for sensor calibration validation according to their regulatory requirements. Cool Track provides calibration offset functionality but does not certify sensors for regulatory compliance.
+
+### 8. Fees and Payment
+
+Pricing and payment terms are specified in separate agreements or quotations. Cool Track reserves the right to modify pricing with 30 days notice for ongoing services.
+
+### 9. Limitation of Liability
+
+To the maximum extent permitted by law, Cool Track shall not be liable for:
+
+- Indirect, incidental, special, or consequential damages
+- Loss of profits, revenue, data, or goodwill
+- Product spoilage or temperature excursions
+- Regulatory fines or compliance violations
+- Damages exceeding fees paid in the preceding 12 months
+
+Users acknowledge that Cool Track is a monitoring and alerting tool, not a temperature control system. Final responsibility for product safety and regulatory compliance rests with the Customer.
+
+### 10. Indemnification
+
+Customer agrees to indemnify and hold Cool Track harmless from any claims, damages, or expenses arising from:
+
+- Customer's use of the Service
+- Violation of these Terms
+- Violation of applicable laws or regulations
+- Product safety incidents or regulatory violations
+
+### 11. Intellectual Property
+
+Cool Track retains all rights, title, and interest in:
+
+- The Cool Track software platform
+- Trademarks, logos, and branding
+- Documentation and user guides
+- Proprietary algorithms and features
+
+Customers receive a limited, non-exclusive, non-transferable license to use the Service.
+
+### 12. Termination
+
+Either party may terminate service with 30 days written notice. Upon termination:
+
+- Customer access to the Service will be disabled
+- Customer may export all data before termination date
+- Cloud-hosted data will be deleted 30 days after termination
+- Self-hosted deployments may continue operation with valid license
+
+### 13. Modifications to Terms
+
+Cool Track may modify these Terms at any time. Continued use of the Service after modifications constitutes acceptance of updated Terms. Material changes will be communicated via email.
+
+### 14. Regulatory Compliance
+
+Cool Track provides tools to support regulatory compliance (FDA, HACCP, CDC guidelines) but does not guarantee compliance. Customers are responsible for:
+
+- Understanding applicable regulations
+- Implementing proper validation and calibration procedures
+- Maintaining required documentation
+- Performing required manual checks and audits
+
+### 15. Governing Law
+
+These Terms are governed by the laws of Dominica, without regard to conflict of law principles.
+
+### 16. Contact Information
+
+For questions about these Terms, contact:
+
+**Cool Track**  
+Email: support@cooltrack.co  
+Phone: +1 (767) 295-1271
+
+**Last Updated:** November 28, 2025

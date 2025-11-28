@@ -66,18 +66,6 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0">
         <div class="footer-widget">
-          <h4 class="mb-4">{{ T `socials` }}</h4>
-
-          {{ with site.Params.contact_info.email }}
-            <ul class="footer-links list-unstyled mb-4">
-              {{ range first 1 . }}
-                {{ if . }}
-                  <li><a href="mailto:{{ . }}">{{ . }}</a></li>
-                {{ end }}
-              {{ end }}
-            </ul>
-          {{ end }}
-
           <ul class="social-links list-inline">
             {{ range site.Data.social.main }}
               <li class="list-inline-item">
@@ -111,6 +99,13 @@
           {{ with site.Params.contact_info }}
             <ul class="footer-links list-unstyled">
               <li>{{ .address | markdownify }}</li>
+              {{ with .email }}
+                {{ range first 1 . }}
+                  {{ if . }}
+                    <li><a href="mailto:{{ . }}">{{ . }}</a></li>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
               {{ range .phone }}
                 {{ if . }}
                   <li><a href="tel:{{ . }}">{{ . }}</a></li>

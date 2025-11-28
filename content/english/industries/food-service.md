@@ -281,12 +281,5 @@ cta:
 ✅ Hot holding and steam tables  
 ✅ Delivery and catering vehicles  
 
-### Get Started in 3 Steps
-
-1. **Order sensors** - Ships same day, arrives in 2-3 days
-2. **Place sensors** - Stick to wall or set on shelf (5 minutes)
-3. **Relax** - You're now monitoring 24/7 automatically
-
-**30-Day Free Trial** - Try Cool Track risk-free. If you don't love it, return sensors for full refund. No questions asked.
-
 The next equipment failure could happen tonight. Don't risk your inventory and reputation—protect your restaurant now.
+
