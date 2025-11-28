@@ -1,0 +1,20 @@
+{{- if site.Params.preloader.preloader -}}
+<!-- Preloader -->
+<div class="preloader">
+  {{- $preloaderImage := resources.Get site.Params.preloader.preloader -}}
+  {{- if $preloaderImage -}}
+    {{- $preloaderImageWebp := $preloaderImage.Resize "36x webp q75" -}}
+    {{- $preloaderImagePng := $preloaderImage.Resize "36x png" -}}
+    <img
+      class="img"
+      loading="preload"
+      decoding="async"
+      src="{{ $preloaderImageWebp.RelPermalink }}"
+      aria-label="preloader"
+      title="preloader"
+      onerror="this.onerror=null,this.src='{{ $preloaderImagePng.RelPermalink }}'"
+      alt="preloader" />
+  {{- end -}}
+</div>
+<!-- Preloader is hidden by JS in script.js via _hidePreloader() -->
+{{- end -}}

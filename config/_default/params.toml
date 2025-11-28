@@ -28,6 +28,9 @@ logo_text = "Cool Track"
 # footer information
 footer_info = "Cool Track provides intelligent temperature monitoring, alerts, and logging for healthcare, food service, and industrial applications. Protect your temperature-sensitive assets with 24/7 automated monitoring and instant alerts."
 
+# copyright
+copyright = "© 2025 Cool Track. All rights reserved."
+
 # contact form action
 contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
 
@@ -38,13 +41,13 @@ buy_premium_popup = false
 custom_script= "" 
 
 # Main Sections
-mainSections= ["blog"]
+mainSections= []
 
 # contact information
 [contact_info]
-address = "123 Temperature Way, Suite 100, San Francisco, CA 94105"
-phone = ["+1-800-COOLTRACK", "+1-415-555-0100", "+1-415-555-0200"]
-email = ["support@cooltrack.com", "sales@cooltrack.com", "info@cooltrack.com"]
+address = ""
+phone = ["+1 (767) 295-1271", "+1 (767) 275-3290", "+1 (246) 836-5557"]
+email = ["support@cooltrack.co"]
 
 # Preloader 
 # module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -55,8 +58,8 @@ preloader = "images/favicon.png" # use jpg, png, svg or gif format.
 # Navigation button
 [navigation_button]
 enable = true
-label = "Start Free Trial"
-link = "#trial"
+label = "Contact us today"
+link = "/contact"
 
 
 # seo meta data for OpenGraph / Twitter Card
@@ -118,6 +121,34 @@ button = "I Accept"
 [cta]
 enable = true
 title = "Ready to protect your temperature-sensitive assets?"
-content = "Start your 30-day free trial today. No credit card required. <br> Join hundreds of businesses that trust Cool Track for 24/7 temperature monitoring."
-button = "Start Free Trial"
-button_link = "#trial"
+content = "Contact us today for a custom quote tailored to your specific monitoring needs."
+button = "Contact us today"
+button_link = "/contact"
+
+# Plugins - CSS & JS resources
+[[plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+
+[[plugins.css]]
+link = "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+
+[[plugins.css]]
+link = "https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+
+[[plugins.js]]
+link = "plugins/aos/aos.js"
+
+[[plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+
+[[plugins.js]]
+link = "plugins/rellax/rellax.min.js"
+
+[[plugins.js]]
+link = "plugins/cookie/cookie.js"
+
+[[plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"
+
+[[plugins.js]]
+link = "plugins/glightbox.js"

@@ -1,0 +1,56 @@
+{{- $title := .Title | default site.Title -}}
+{{- $description := .Description | default site.Params.metadata.description | default site.Params.description -}}
+{{- $author := .Params.author | default site.Params.metadata.author | default site.Params.author -}}
+{{- $keywords := .Params.keywords | default site.Params.metadata.keywords -}}
+
+<!-- Basic SEO -->
+<meta name="keywords" content="{{ if $keywords }}{{ delimit $keywords `,` }}{{ end }}" />
+<meta name="description" content="{{ $description }}" />
+<meta name="author" content="{{ $author }}" />
+
+{{- $image := "" -}}
+{{- if .Params.image -}}
+  {{- $image = .Params.image | absURL -}}
+{{- else if site.Params.metadata.image -}}
+  {{- $image = printf "%s%s" site.BaseURL site.Params.metadata.image -}}
+{{- else -}}
+  {{- $image = printf "%s%s" site.BaseURL "images/og-image.png" -}}
+{{- end -}}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ $image }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="{{ site.Title }}" />
+<meta property="og:locale" content="{{ site.Language.Lang | default `en_US` }}" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ $image }}" />
+{{- if site.Params.social.twitter -}}
+<meta name="twitter:site" content="@{{ site.Params.social.twitter }}" />
+<meta name="twitter:creator" content="@{{ $author }}" />
+{{- else -}}
+<meta name="twitter:creator" content="@{{ $author }}" />
+{{- end -}}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- DNS Prefetch -->
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+<link rel="dns-prefetch" href="https://use.fontawesome.com" />
+{{- if site.Params.contact_form_action -}}
+<link rel="dns-prefetch" href="https://formspree.io" />
+{{- end -}}

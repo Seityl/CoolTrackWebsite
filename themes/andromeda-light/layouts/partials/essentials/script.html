@@ -5,9 +5,9 @@
 {{ $opts := dict "sourceMap" $sourceMap "target" "es2018" "params" $params }}
 {{ $bootstrap = $bootstrap | js.Build $opts }}
 {{ if hugo.IsProduction }}
-  {{ $bootstrap = $bootstrap | fingerprint "sha512" }}
+  {{ $bootstrap = $bootstrap | minify | fingerprint "sha512" }}
 {{ end }}
-<script crossorigin="anonymous" defer {{ if hugo.IsProduction }}integrity="{{ $bootstrap.Data.Integrity }}"{{end}} type="application/javascript">{{$bootstrap.Content | safeJS}}</script>
+<script crossorigin="anonymous" defer {{ if hugo.IsProduction }}integrity="{{ $bootstrap.Data.Integrity }}"{{end}} type="text/javascript">{{$bootstrap.Content | safeJS}}</script>
 
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
@@ -15,7 +15,9 @@
   {{ if findRE "^http" .link }}
     <script
       src="{{ .link | relURL }}"
-      type="application/javascript"
+      type="text/javascript"
+      defer
+      crossorigin="anonymous"
       {{ .attributes | safeHTMLAttr }}></script>
   {{ else }}
     {{ $scripts = $scripts | append (resources.Get .link) }}
@@ -24,23 +26,34 @@
 
 
 <!-- main script -->
-{{ $scripts = $scripts | append (resources.Get "js/script.js" | minify) }}
+{{ $scripts = $scripts | append (resources.Get "js/script.js") }}
 {{ $scripts = $scripts | resources.Concat "js/script.js" | minify | fingerprint "sha512" }}
-<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
+<script crossorigin="anonymous" defer integrity="{{ $scripts.Data.Integrity }}" type="text/javascript">{{$scripts.Content | safeJS}}</script>
 
-<!-- font family -->
+<!-- font family - optimized with font-display swap -->
 {{ $pf:= site.Params.variables.font_primary }}
 {{ $sf:= site.Params.variables.font_secondary }}
-<script type="application/javascript">
+<script type="text/javascript">
+  // Check if fonts are already loaded from session storage
+  if (sessionStorage.fontsLoaded) {
+    document.documentElement.classList.add('fonts-loaded');
+  }
+  
   WebFont.load({
     google: {
       api: 'https://fonts.googleapis.com/css2',
       families: ['{{$pf | default `Lato:wght@400`}}{{if not $sf}}&display=swap{{end}}'{{with $sf}},'{{. | default `Lato:wght@400`}}&display=swap'{{end}}],
       version: 2
     },
-    active: () => {
-      sessionStorage.fontsLoaded = true
-    }
+    active: function() {
+      sessionStorage.fontsLoaded = true;
+      document.documentElement.classList.add('fonts-loaded');
+    },
+    inactive: function() {
+      // Fallback to system fonts if web fonts fail
+      document.documentElement.classList.add('fonts-failed');
+    },
+    timeout: 3000 // 3 second timeout
   });
 </script>
 

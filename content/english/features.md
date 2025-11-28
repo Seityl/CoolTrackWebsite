@@ -1,13 +1,13 @@
 ---
-title: "Features - Complete Temperature Monitoring Solution"
-description: "Discover all the powerful features that make Cool Track the leading temperature monitoring system for healthcare, food service, and industrial applications."
+title: "Cool Track Platform Features"
+description: "Professional Frappe-based temperature monitoring with multi-gateway sensor networks, intelligent alerts, and Progressive Web App access. Built for food service, healthcare, and industrial compliance."
 draft: false
 
 # Hero Section
 hero:
-  title: "Enterprise-Grade Temperature Monitoring"
-  subtitle: "Every feature you need to protect your assets and maintain compliance"
-  image: "images/features-hero.png"
+  title: "Professional Temperature Monitoring Platform"
+  subtitle: "Frappe-powered solution with real-time sensor tracking and intelligent alerting"
+  image: "images/dashboard-main.png"
 
 # Feature Categories
 feature_categories:
@@ -108,95 +108,17 @@ feature_categories:
 
 # Comparison Table
 comparison:
-  enable: true
-  title: "Compare Cool Track Plans"
-  subtitle: "Choose the plan that fits your needs"
-  plans:
-    - name: "Starter"
-      price: "$49"
-      period: "/month"
-      features:
-        - text: "Up to 5 sensors"
-          included: true
-        - text: "Real-time monitoring"
-          included: true
-        - text: "Email & SMS alerts"
-          included: true
-        - text: "90-day data retention"
-          included: true
-        - text: "Mobile app access"
-          included: true
-        - text: "Basic reports"
-          included: true
-        - text: "Phone alerts"
-          included: false
-        - text: "API access"
-          included: false
-        - text: "Custom branding"
-          included: false
-        - text: "Dedicated support"
-          included: false
-    
-    - name: "Professional"
-      price: "$149"
-      period: "/month"
-      popular: true
-      features:
-        - text: "Up to 25 sensors"
-          included: true
-        - text: "Real-time monitoring"
-          included: true
-        - text: "Email, SMS & phone alerts"
-          included: true
-        - text: "Unlimited data retention"
-          included: true
-        - text: "Mobile app access"
-          included: true
-        - text: "Advanced reports"
-          included: true
-        - text: "Alert escalation"
-          included: true
-        - text: "API access"
-          included: true
-        - text: "Multi-user management"
-          included: true
-        - text: "Priority support"
-          included: false
-    
-    - name: "Enterprise"
-      price: "Custom"
-      period: "pricing"
-      features:
-        - text: "Unlimited sensors"
-          included: true
-        - text: "Real-time monitoring"
-          included: true
-        - text: "All alert types"
-          included: true
-        - text: "Unlimited data retention"
-          included: true
-        - text: "Mobile app access"
-          included: true
-        - text: "Custom reports"
-          included: true
-        - text: "Alert escalation"
-          included: true
-        - text: "API access"
-          included: true
-        - text: "SSO integration"
-          included: true
-        - text: "24/7 dedicated support"
-          included: true
+  enable: false
 
 # CTA Section
 cta:
   enable: true
   title: "Ready to protect your temperature-sensitive assets?"
-  description: "Start your 30-day free trial today. No credit card required."
-  button_text: "Start Free Trial"
-  button_link: "#trial"
-  secondary_button: "Schedule Demo"
-  secondary_link: "#demo"
+  description: "Contact us today for a quote tailored to your needs."
+  button_text: "Contact us today"
+  button_link: "/contact"
+  secondary_button: ""
+  secondary_link: ""
 ---
 
 ## Why Cool Track?

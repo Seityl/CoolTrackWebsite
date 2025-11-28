@@ -40,14 +40,9 @@ url = "pricing/"
 weight = 4
 
 [[main]]
-name = "Blog"
-url = "blog/"
-weight = 5
-
-[[main]]
 name = "Contact"
 url = "contact/"
-weight = 6
+weight = 5
 
 
 
@@ -74,16 +69,11 @@ url = "industries/food-service/"
 weight = 4
 
 [[footer]]
-name = "Blog"
-url = "blog/"
-weight = 5
-
-[[footer]]
 name = "Contact"
 url = "contact/"
-weight = 6
+weight = 5
 
 [[footer]]
 name = "Terms & Conditions"
 url = "terms-and-conditions/"
-weight = 7
+weight = 6

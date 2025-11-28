@@ -16,3 +16,11 @@ Thumbs.db
 # Temporary files
 *.log
 .hugo_build.lock
+hugo_stats.json
+build.log
+caddy.log
+
+# Backup files
+Caddyfile.production
+*.backup
+*~

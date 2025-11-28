@@ -1,0 +1,15 @@
+// Fix for feature card icons - ensure icons are visible above background
+.features-card {
+  .icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    
+    i {
+      position: relative !important;
+      z-index: 2 !important;
+      display: inline-block !important;
+    }
+  }
+}
