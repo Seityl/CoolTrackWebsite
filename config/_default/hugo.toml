@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://cooltrack.com/"
+baseURL = "/"
 title = "Cool Track - Intelligent Temperature Monitoring"
 theme = "andromeda-light"
 timeZone = "America/New_York"
@@ -7,3 +7,55 @@ languageCode = "en-us"
 pagination.pagerSize = 12
 summaryLength = 20
 enableRobotsTXT = true
+
+# Performance optimizations
+[minify]
+  disableHTML = false
+  disableCSS = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      keepCSS2 = false
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 0
+
+# Image processing
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"
+  
+# Caching
+[caches]
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "24h"
+  [caches.getcsv]
+    dir = ":cacheDir/:project"
+    maxAge = "24h"
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = -1
+  [caches.assets]
+    dir = ":resourceDir/_gen"
+    maxAge = -1
+  [caches.modules]
+    dir = ":cacheDir/modules"
+    maxAge = -1
+
+# Build performance
+[build]
+  writeStats = true
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js|ts|jsx|tsx)"
+    target = "(js|scripts|javascript)"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"

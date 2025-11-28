@@ -1,0 +1,3 @@
+#!/bin/bash
+# Quick launcher for Cool Track management
+exec "$(dirname "$0")/scripts/manage.sh" "$@"

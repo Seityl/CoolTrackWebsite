@@ -1,0 +1,30 @@
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/line-awesome/css/line-awesome.min.css"
+
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.min.css"
+
+[[params.plugins.css]]
+link = "plugins/aos/aos.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/aos/aos.js"
+
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+
+[[params.plugins.js]]
+link = "plugins/rellax/rellax.min.js"
+
+[[params.plugins.js]]
+link = "plugins/cookie/cookie.js"
+
+[[params.plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"
+
+[[params.plugins.js]]
+link = "plugins/glightbox.js"

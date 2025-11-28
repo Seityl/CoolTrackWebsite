@@ -1,0 +1,84 @@
+# Caddyfile for Cool Track Website
+# Production configuration for use with Cloudflare Tunnel
+
+{
+    # Disable admin API to avoid port conflicts
+    admin off
+}
+
+# Listen on port 8080 (Cloudflare Tunnel will connect here)
+:8080 {
+    # Serve the Hugo-generated static files
+    root * /home/hugo/cooltrack-website/public
+    
+    # Enable file serving with precompressed files
+    file_server {
+        precompressed gzip br
+    }
+    
+    # Enable compression (gzip and brotli for better performance)
+    encode {
+        gzip 6
+        # brotli is better but gzip is more compatible
+        zstd
+        minimum_length 256
+    }
+    
+    # Security headers
+    header {
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        # XSS protection
+        X-XSS-Protection "1; mode=block"
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        # Referrer policy
+        Referrer-Policy "strict-origin-when-cross-origin"
+        # Content Security Policy (adjust as needed)
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://use.fontawesome.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://www.youtube.com https://player.vimeo.com;"
+        # Permissions Policy
+        Permissions-Policy "geolocation=(), microphone=(), camera=()"
+        # Remove Server header
+        -Server
+    }
+    
+    # Cache static assets (images, CSS, JS) - 1 year for fingerprinted assets
+    @static_fingerprinted {
+        path_regexp .*\.(css|js)\?.*
+        path_regexp .*-[a-f0-9]{8,64}\.(css|js|woff|woff2|ttf|eot)
+    }
+    header @static_fingerprinted {
+        Cache-Control "public, max-age=31536000, immutable"
+        defer
+    }
+    
+    # Cache other static assets - shorter cache for images that might update
+    @static {
+        path *.ico *.css *.js *.gif *.jpg *.jpeg *.png *.svg *.webp *.woff *.woff2 *.ttf *.eot *.otf
+    }
+    header @static {
+        Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+        defer
+    }
+    
+    # HTML caching - short cache with revalidation
+    @html {
+        path *.html /
+    }
+    header @html {
+        Cache-Control "public, max-age=3600, must-revalidate"
+        defer
+    }
+    
+    # Try files, fallback to index.html for SPA-like behavior
+    try_files {path} {path}/ {path}.html {path}/index.html /index.html
+    
+    # Logging
+    log {
+        output file /home/hugo/cooltrack-website/caddy.log {
+            roll_size 10mb
+            roll_keep 5
+        }
+        format json
+    }
+}

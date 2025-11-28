@@ -1,0 +1,44 @@
+# Caddyfile for Cool Track Website - MAINTENANCE MODE
+# This configuration serves the maintenance page
+
+{
+    # Disable admin API to avoid port conflicts
+    admin off
+}
+
+# Listen on port 8080 (Cloudflare Tunnel will connect here)
+:8080 {
+    # Serve the maintenance page
+    root * /home/hugo/cooltrack-website
+    
+    # Serve maintenance.html for all requests
+    rewrite * /maintenance.html
+    
+    file_server
+    
+    # Enable gzip compression
+    encode gzip
+    
+    # Security headers
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-XSS-Protection "1; mode=block"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+    
+    # Return 503 Service Unavailable status
+    header {
+        X-Maintenance-Mode "true"
+    }
+    
+    # Logging
+    log {
+        output file /home/hugo/cooltrack-website/caddy.log {
+            roll_size 10mb
+            roll_keep 5
+        }
+        format json
+    }
+}

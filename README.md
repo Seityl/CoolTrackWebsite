@@ -2,6 +2,25 @@
 
 Official website for Cool Track, the leading temperature monitoring solution for healthcare, food service, and industrial applications.
 
+## Quick Start
+
+### Website Management
+
+```bash
+# Interactive menu for all operations
+./manage
+```
+
+**Common Commands:**
+```bash
+./scripts/build.sh               # Rebuild website
+./scripts/status.sh              # Check server status
+./scripts/maintenance-enable.sh  # Enable maintenance mode
+./scripts/maintenance-disable.sh # Disable maintenance mode
+```
+
+See [QUICKSTART.md](QUICKSTART.md) for more details.
+
 ## Overview
 
 Cool Track provides 24/7 automated temperature monitoring with real-time alerts, cloud logging, and compliance-ready documentation for businesses that can't afford equipment failure or regulatory violations.
@@ -17,8 +36,10 @@ Cool Track provides 24/7 automated temperature monitoring with real-time alerts,
 ## Technology Stack
 
 - **Static Site Generator**: Hugo v0.121.2 (Extended)
+- **Web Server**: Caddy v2.10.2 (production)
+- **CDN/Tunnel**: Cloudflare Tunnel
 - **Theme**: Andromeda Light
-- **Deployment**: GitHub Actions CI/CD → GitHub Pages
+- **CI/CD**: GitHub Actions
 - **Modules**: Bootstrap SCSS, SEO tools, image optimization
 
 ## Local Development
@@ -67,10 +88,18 @@ cooltrack-website/
 │       ├── pricing.md     # Pricing page
 │       ├── blog/          # Blog posts
 │       └── industries/    # Industry pages
+├── scripts/               # Management scripts
+│   ├── manage.sh          # Interactive menu
+│   ├── build.sh           # Build site
+│   ├── status.sh          # Check status
+│   └── maintenance-*.sh   # Maintenance mode scripts
 ├── static/                # Static files (robots.txt, etc.)
 ├── themes/
 │   └── andromeda-light/   # Hugo theme
-└── public/                # Generated site (not in repo)
+├── public/                # Generated site (not in repo)
+├── Caddyfile              # Web server config
+├── maintenance.html       # Maintenance page
+└── manage                 # Quick launcher
 ```
 
 ## Content Management
@@ -104,15 +133,41 @@ Edit markdown files in `content/english/`:
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when code is pushed to the `main` branch.
+### Production Server
 
-### Manual Deployment
+The site runs on:
+- **Web Server**: Caddy (localhost:8080)
+- **CDN**: Cloudflare Tunnel → cooltrack.co
+- **SSL**: Automatic via Cloudflare
+
+**Update Workflow:**
+```bash
+# 1. Enable maintenance mode
+./scripts/maintenance-enable.sh
+
+# 2. Pull changes and rebuild
+git pull
+./scripts/build.sh
+
+# 3. Test locally
+curl http://localhost:8080
+
+# 4. Go live
+./scripts/maintenance-disable.sh
+```
+
+**Cloudflare Tunnel Configuration:**
+- Dashboard: https://one.dash.cloudflare.com/ → Access → Tunnels
+- Service: `http://localhost:8080`
+- Domain: `cooltrack.co`
+
+### Manual Build
 
 ```bash
 # Build the site
 hugo --minify
 
-# Deploy (GitHub Actions handles this automatically)
+# Files generated in /public/
 ```
 
 ## SEO
